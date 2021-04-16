@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So Nguyen To</title>
+</head>
+<body>
+<p id="isPrime"></p>
+<script>
+    let number1 = +prompt('nhap so can kiem tra');
+    let flag = true;
+
+    function checkPrime(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false;
+            }
+        }
+
+
+        return flag;
+
+    }
+
+    for (let n = 3; n < number1; n++) {
+        flag = checkPrime(n);
+        if (flag === true) {
+            document.write(n + '<br>');
+        }
+    }
+
+
+</script>
+</body>
+</html>
